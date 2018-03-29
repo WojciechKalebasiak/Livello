@@ -1,0 +1,114 @@
+.gallery {
+    .wrapper {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        @include mq(xl) {
+            padding-top: 3%;
+            padding-bottom: 3%;
+        }
+        @include mq(md) {
+            display: flex;
+        }
+        @include mq(sm) {
+            padding: 10% 2%;
+        }
+    }
+    background-color: #f5f6f7;
+    .ourcomunity {
+        text-align: center;
+        margin-top: 5%;
+        display: inline-block;
+        flex: 1;
+        @include mq(sm) {
+            display: block;
+            margin: 0 auto;
+        }
+        h3 {
+            margin-top: 10%;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-family: $primaryfont;
+            font-weight: bold;
+            font-size: 1em;
+            @include mq(sm) {
+                font-size: 1.5em;
+            }
+        }
+        p {
+            display: inline-block;
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 10%;
+            font-family: $primaryfont;
+            font-weight: bold;
+            font-size: 0.625em;
+            color: #373737;
+            @include mq(sm) {
+                margin-top: 2%;
+            }
+        }
+    }
+
+
+    [class*="slide-gallery"] {
+        padding: 0;
+        margin: 0;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: black;
+    }
+
+    .gallery-carousel {
+        flex: 4;
+        @include mq(sm) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    #gallery-slider {
+        img {
+            display: inline-block;
+            transition: filter .6s ease-in;
+            margin-left: auto;
+            width: 370px;
+            height: 244px;
+            @include mq(sm) {
+                display: block;
+                max-width: 290px;
+                margin: 0 auto;
+                margin-top: 5%;
+            }
+            @include mq(md) {
+                filter: blur(5px);
+                &:hover {
+                    filter: blur(0px);
+                }
+            }
+        }
+        .gallery-wrapper {
+            @include mq(md) {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .arrows {
+        text-align: right;
+        @include mq(sm) {
+            margin-right: 0;
+            align-self: center;
+            display: flex;
+            flex-direction: row;
+            margin-top: 5%;
+        }
+        .slide-gallery-right {
+            margin-left: 2%;
+            @include mq(sm) {
+                margin-left: 60px;
+            }
+        }
+    }
+}

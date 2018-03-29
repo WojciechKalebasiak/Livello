@@ -1,0 +1,62 @@
+.subscribe {
+    background: url('../images/subscribebg.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 790px;
+    text-align: center;
+    @include mq(sm) {
+        max-height: 500px;
+    }
+
+    .subscribe-wrapper {
+        margin-top: 25%;
+        @include mq(sm) {
+            margin-top: 25vh;
+        }
+        @include mq(xl) {
+            margin-top: 25vh;
+        }
+    }
+
+    h2 {
+        @extend .section-title;
+        font-size: 1.5em;
+        color: white;
+        letter-spacing: 3.5px;
+    }
+
+    input {
+        padding: 1% 0;
+        padding-left: 20px;
+        width: 27%;
+        @include mq(sm) {
+            padding-left: 2%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            width: 50%;
+        }
+    }
+
+     ::placeholder {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: $primaryfont;
+        letter-spacing: 2px;
+        color: black;
+        @include mq(sm) {
+            font-size: .5em;
+        }
+    }
+
+    form {
+        margin-top: 3%;
+        justify-content: center;
+    }
+
+    button {
+        background-color: $secondarycolor;
+        color: white;
+        border: none;
+        padding: 0 2%;
+    }
+}

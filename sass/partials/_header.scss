@@ -1,0 +1,97 @@
+header {
+    .wrapper {
+        padding-top: 0;
+    }
+    height: 100vh;
+    @include mq(sm) {
+        height: 600px;
+        overflow: hidden;
+    }
+    background-image: url("../images/backgroundheader.jpg");
+    background-position: bottom;
+    background-size: cover;
+    a {
+        font-family: $primaryfont;
+        font-size: 1em;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s ease-in;
+        @include mq(md) {
+            &:hover {
+                color: $secondarycolor;
+            }
+        }
+    }
+    .brand {
+
+        img {
+            position: relative;
+            top: -20px;
+            @include mq(sm) {
+                top: 0px;
+            }
+        }
+    }
+    i {
+        color: #fff;
+    }
+    .navigation {
+        margin-top: 5%;
+    }
+    .header-text {
+        margin-top: 25vh;
+        @include mq(sm) {
+            margin-top: 20vh;
+        }
+        .main-title {
+            font-size: 2.2em;
+            font-family: $primaryfont;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+        .main-subtitle {
+            font-size: 1em;
+            font-family: $primaryfont;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+    }
+    .social-media {
+        display: block;
+        margin-top: 30vh;
+        @include mq(sm) {
+            margin-top: 25vh;
+        }
+        @include mq(xl) {
+            margin-top: 40vh;
+        }
+        i {
+            margin: 0 0.5%;
+            transition: color .3s ease-in;
+        }
+        .twitter {
+            @include mq(md) {
+                &:hover {
+                    color: #009CF1
+                }
+            }
+        }
+        .flickr {
+            @include mq(md) {
+                &:hover {
+                    color: #0063DB;
+                }
+            }
+        }
+        .dribbble {
+            @include mq(md) {
+                &:hover {
+                    color: #FF4790;
+                }
+            }
+        }
+    }
+}

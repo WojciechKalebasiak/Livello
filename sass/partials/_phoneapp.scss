@@ -1,0 +1,140 @@
+.phoneapp {
+    background-color: #f5f6f7;
+    height: 560px;
+    overflow-y: hidden;
+    @include mq(sm) {
+        height: 100%;
+        padding: 3%;
+    }
+    .app-description {
+        display: inline-block;
+        width: 40%;
+        @include mq(sm) {
+            width: 100%;
+            text-align: center;
+        }
+        vertical-align: top;
+        padding-bottom: 10%;
+        h2 {
+            text-align: left;
+            padding-right: 5%;
+            @include mq(sm) {
+                text-align: center;
+            }
+        }
+        p {
+            margin-top: 10%;
+            color: $primaryfontcolor;
+            font-family: $primaryfont;
+            letter-spacing: 1.5px;
+            line-height: 24px;
+        }
+        button {
+            @extend .infobutton;
+            padding-left: 2.8em;
+            padding-right: 2.8em;
+            margin-top: 5%;
+        }
+    }
+    .iphone {
+        display: inline-block;
+        width: 30%;
+        @include mq(sm) {
+            display: none;
+        }
+    }
+}
+
+.slider-section {
+    .row {
+        @include mq(sm) {
+            margin-right: 0;
+        }
+    }
+    .container {
+        padding: 0;
+    }
+    .wrapper {
+        @include mq(sm) {
+            padding-bottom: 20%;
+        }
+    }
+    .phone-slider {
+        height: 415px;
+        width: 315px;
+        @include mq(sm) {
+            height: 100%;
+            margin: 0 auto;
+            padding-right: 0;
+        }
+        overflow: hidden;
+    }
+    .design {
+        padding-right: 0;
+        @include mq(sm) {
+            margin-top: 5%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .slider-indicators {
+        @include mq(sm) {
+            order: -1;
+            margin-bottom: 10%;
+        }
+    }
+    h2 {
+        text-align: left;
+        @include mq(sm) {
+            text-align: center;
+        }
+    }
+    p {
+        color: $primaryfontcolor;
+        font-family: $primaryfont;
+        letter-spacing: 1.5px;
+        line-height: 24px;
+        text-align: left;
+        @include mq(sm) {
+            text-align: center;
+            padding: 0 7%;
+        }
+    }
+    .learn-more-button {
+        @extend .infobutton;
+        padding-left: 2.8em;
+        padding-right: 2.8em;
+        @include mq(sm) {
+            align-self: center;
+        }
+        margin-top: 5%;
+    }
+    span {
+        color: #dfdfdf;
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+    .counters {
+        display: block;
+        margin-top: 5%;
+        color: #dfdfdf;
+    }
+    [class*="slide-design"] {
+        padding: 0;
+        margin: 0;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: black;
+    }
+    .slide-design-right {
+        margin-left: 4%;
+        @include mq(sm) {
+            margin-left: 60px;
+        }
+    }
+    .arrows {
+        display: block;
+    }
+}
